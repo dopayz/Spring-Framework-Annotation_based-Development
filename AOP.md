@@ -2,6 +2,7 @@
   - [实现三步骤](#实现三步骤)
   - [业务类](#业务类)
   - [切面类](#切面类)
+    - [环绕通知](#环绕通知)
   - [配置类](#配置类)
 ## AOP
 > * 指在程序运行期动态的将某段代码切入到指定方法指定位置运行的编程方式
@@ -60,6 +61,33 @@ public class LogAspects {
     @AfterThrowing(value = "pointCut()",throwing = "exception")
     public void logException(JoinPoint joinPoint,Exception exception){
         System.out.println(joinPoint.getSignature().getName()+"异常....{"+exception+"}...");
+    }
+}
+```
+#### 环绕通知
+  ```java
+@Aspect   //切面类
+public class LogAspects {
+    //@Pointcut切入点，以及表达式
+    @Pointcut("execution(public int com.zy.aop.MathCalculator.*(..))")
+    public void pointCut(){};
+
+   @Around(value = "pointCut()")
+    public Object around(ProceedingJoinPoint pjp){
+        Object[] args = pjp.getArgs();
+        String methodName = pjp.getSignature().getName();
+
+        System.out.println(methodName+"开始执行...参数：{"+Arrays.asList(args)+"}");
+        Object obj = null;
+        try {
+            obj = pjp.proceed(args);//执行目标方法
+            System.out.println(methodName+"返回值：{"+obj+"}");
+        } catch (Throwable throwable) {
+            System.out.println(methodName+"异常：{"+throwable+"}");
+            throwable.printStackTrace();
+        }
+        System.out.println(methodName+"执行结束...");
+        return obj;
     }
 }
 ```
