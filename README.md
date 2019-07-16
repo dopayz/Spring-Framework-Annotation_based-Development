@@ -24,8 +24,12 @@
   * java Proxy
   * ASM
 ## 声明式事务
+  * [声明式事务](#声明式事务.md)
 
 ## 扩展原理
+  * [BeanDefinitionRegistryPostProcessor](#BeanDefinitionRegistryPostProcessor)
+  * [BeanFactoryPostProcessor](#BeanFactoryPostProcessor)
+  * [ApplicationListener](#ApplicationListener)
 
 ## 容器创建
 
