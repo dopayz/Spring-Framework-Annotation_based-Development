@@ -44,22 +44,22 @@ public class LogAspects {
     @Before("pointCut()")
     public void logStart(JoinPoint joinPoint){
         Object[] args = joinPoint.getArgs();
-        System.out.println(""+joinPoint.getSignature().getName()+"开始....{"+ Arrays.asList(args)+"}");
+        System.out.println(joinPoint.getSignature().getName()+"开始....{"+ Arrays.asList(args)+"}");
     }
     //@After:后置通知，方法返回结果之前执行
     @After("pointCut()")
     public void logEnd(JoinPoint joinPoint){
-        System.out.println(""+joinPoint.getSignature().getName()+"结束...");
+        System.out.println(joinPoint.getSignature().getName()+"结束...");
     }
     //@AfterReturning:返回通知,方法执行完之后
     @AfterReturning(value = "pointCut()",returning = "result")
     public void logReturn(JoinPoint joinPoint,Object result){
-        System.out.println(""+joinPoint.getSignature().getName()+"结果....{"+result+"}...");
+        System.out.println(joinPoint.getSignature().getName()+"结果....{"+result+"}...");
     }
     //@AfterThrowing：异常通知,方法抛出异常之后
     @AfterThrowing(value = "pointCut()",throwing = "exception")
     public void logException(JoinPoint joinPoint,Exception exception){
-        System.out.println(""+joinPoint.getSignature().getName()+"异常....{"+exception+"}...");
+        System.out.println(joinPoint.getSignature().getName()+"异常....{"+exception+"}...");
     }
 }
 ```
