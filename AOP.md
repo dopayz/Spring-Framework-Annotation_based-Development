@@ -109,3 +109,15 @@ public class MainConfig {
     }
 }
 ```
+
+单元测试
+```java
+public class IOC_AOPTest {
+    @Test
+    public void test1(){
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MainConfig.class);
+        MathCalculator mathCalculator = (MathCalculator)context.getBean("mathCalculator");
+        mathCalculator.div(5,2);
+    }
+}
+```
