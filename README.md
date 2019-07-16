@@ -19,7 +19,10 @@
   * [自动装配](自动装配.md)
 
 ## AOP
-
+  * [AOP](AOP.md)
+  * cglib
+  * java Proxy
+  * ASM
 ## 声明式事务
 
 ## 扩展原理
