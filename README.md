@@ -1,4 +1,9 @@
 # Spring注解驱动开发
+
+> JDK1.8
+> Spring 4.3.12（maven中央仓库下载spring-context,版本4.3.12.RELEASE）
+> IntelliJ IDEA ULTIMATE 2017.3
+
   - [IOC](#IOC)
   - [AOP](#AOP)
   - [声明式事务](#声明式事务)
