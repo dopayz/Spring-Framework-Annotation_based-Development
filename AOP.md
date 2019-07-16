@@ -69,7 +69,7 @@ public class LogAspects {
 @Aspect   //切面类
 public class LogAspects {
     //@Pointcut切入点，以及表达式
-    @Pointcut("execution(public int com.zy.aop.MathCalculator.*(..))")
+    @Pointcut("execution(public * com.zy.aop.M*.*(..))")
     public void pointCut(){};
 
    @Around(value = "pointCut()")
