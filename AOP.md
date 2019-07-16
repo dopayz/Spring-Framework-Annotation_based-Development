@@ -69,7 +69,7 @@ public class LogAspects {
 ```java
 @EnableAspectJAutoProxy //开启Spring的aop注解模式
 @Configuration
-public class MainConfigOfAOP {
+public class MainConfig {
     @Bean
     public MathCalculator mathCalculator(){
         return new MathCalculator();
