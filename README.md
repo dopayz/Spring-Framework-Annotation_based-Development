@@ -27,9 +27,9 @@
   * [声明式事务](声明式事务.md)
 
 ## 扩展原理
-  * [BeanDefinitionRegistryPostProcessor](#BeanDefinitionRegistryPostProcessor)
-  * [BeanFactoryPostProcessor](#BeanFactoryPostProcessor)
-  * [ApplicationListener](#ApplicationListener)
+  * [BeanDefinitionRegistryPostProcessor](BeanDefinitionRegistryPostProcessor.md)
+  * [BeanFactoryPostProcessor](BeanFactoryPostProcessor.md)
+  * [ApplicationListener](ApplicationListener.md)
 
 ## 容器创建
 
