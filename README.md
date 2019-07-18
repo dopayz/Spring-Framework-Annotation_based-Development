@@ -21,9 +21,7 @@
 
 ## AOP
   * [AOP](AOP.md)
-  * cglib
-  * java Proxy
-  * ASM
+  * [AspectJ]
 ## 声明式事务
   * [声明式事务](声明式事务.md)
 
